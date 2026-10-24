@@ -2,7 +2,9 @@
 
 Birden fazla çıkışı sırayla kontrol et.
 
-![Blok akışı](../../gorseller/02-trafik-lambasi.svg)
+![mBlock blok yerleşimi](../../gorseller/02-trafik-lambasi.png)
+
+[Ölçeklenebilir SVG görseli](../../gorseller/02-trafik-lambasi.svg)
 
 ## Malzemeler
 
@@ -21,17 +23,27 @@ Devreyi USB bağlantısını çıkardıktan sonra kur.
 
 ## mBlock’ta oluştur
 
-Arduino Uno cihazını seç, Upload/Yükle moduna geç. Aşağıdaki temsili akışı cihazın başlangıç, kontrol, pin okuma/yazma ve işlem bloklarıyla kur. Etiketler dil ve cihaz uzantısı sürümüne göre değişebilir; buradaki metin bire bir menü adı değildir.
+Arduino Uno cihazını seç ve Upload/Yükle moduna geç. Görsel, mBlock’un renkleri, bağlantı çentikleri ve iç içe blok yerleşimi esas alınarak yeniden çizilmiştir; uygulama ekran görüntüsü değildir. Türkçe etiketler kurulu sürüme göre küçük farklılıklar gösterebilir.
+
+Her mavi pin bloğu yalnız bir çıkışı ayarlar. Üç pini tek satırda ayarlayan özel bir blok arama: dokuz ayrı pin bloğu ve üç bekleme bloğu kullan. 12 bloğun tamamını aynı sürekli tekrarla bloğunun içine yerleştir.
+
+Aşağıdaki metin, görselin okunabilir dökümüdür. Yuvarlak parantezler sayı/değer yuvalarını, köşeli parantezler açılır seçimleri, açılı parantezler koşul yuvasını temsil eder; bunları mBlock’a metin olarak yapıştırma.
 
 ```text
-Arduino Uno başladığında
-sürekli tekrarla
-  D8=1, D9=0, D10=0
-  3 saniye bekle
-  D8=0, D9=0, D10=1
-  3 saniye bekle
-  D8=0, D9=1, D10=0
-  1 saniye bekle
+Arduino başladığında
+  sürekli tekrarla
+    dijital ayarla pin (8) çıkış [yüksek]
+    dijital ayarla pin (9) çıkış [düşük]
+    dijital ayarla pin (10) çıkış [düşük]
+    (3) saniye bekle
+    dijital ayarla pin (8) çıkış [düşük]
+    dijital ayarla pin (9) çıkış [düşük]
+    dijital ayarla pin (10) çıkış [yüksek]
+    (3) saniye bekle
+    dijital ayarla pin (8) çıkış [düşük]
+    dijital ayarla pin (9) çıkış [yüksek]
+    dijital ayarla pin (10) çıkış [düşük]
+    (1) saniye bekle
 ```
 
 Yükle düğmesini kullan.

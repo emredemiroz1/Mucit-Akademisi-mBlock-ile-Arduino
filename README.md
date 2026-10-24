@@ -17,10 +17,16 @@ Bu depo bir eğitim içeriğidir. Yeni bir IDE ya da değiştirilmiş mBlock uyg
 | [3. Butonla LED kontrolü](ornekler/03-buton-led/README.md) | Dijital giriş, koşul ve pull-down direncini öğren. | [Blok kartı](gorseller/03-buton-led.svg) |
 | [4. Potansiyometre ile parlaklık](ornekler/04-potansiyometre-pwm/README.md) | Analog okuma ile PWM çıkışının aralıklarını eşleştir. | [Blok kartı](gorseller/04-potansiyometre-pwm.svg) |
 
+## Bloklar nasıl görünür?
+
+![LED örneğinin mBlock blok yerleşimi](gorseller/01-led-yanip-sonme.png)
+
+Sarı başlangıç bloğu, turuncu kontrol blokları, mavi pin blokları, turuncu değişkenler ve yeşil işlemler birbirine geçen şekillerle gösterilir. Döngünün ve koşulun içinde kalan blokları görseldeki girintilere göre yerleştir.
+
 ## Dosyalar nasıl kullanılır?
 
 - Derslerde malzeme listesi, bağlantı tablosu, blok akışı ve alıştırma vardır.
-- SVG görselleri tarayıcıda açabilir, büyütebilir ve yazdırabilirsin. Bunlar özgün, temsili öğretim şemalarıdır; gerçek mBlock ekran görüntüleri değildir.
+- PNG görselleri doğrudan görüntüleyebilir; SVG sürümlerini büyütebilir ve yazdırabilirsin. Görseller mBlock blok biçimlerine göre yeniden çizilmiş öğretim şemalarıdır; gerçek uygulama ekran görüntüleri değildir.
 - .ino dosyaları Arduino IDE için karşılaştırma kodlarıdır.
 - Bu sürümde açılabilir .mblock proje dosyası yoktur; blokları yönergelerle mBlock’ta kurup kendi projen olarak kaydet.
 

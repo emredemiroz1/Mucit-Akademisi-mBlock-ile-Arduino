@@ -2,7 +2,9 @@
 
 Analog okuma ile PWM çıkışının aralıklarını eşleştir.
 
-![Blok akışı](../../gorseller/04-potansiyometre-pwm.svg)
+![mBlock blok yerleşimi](../../gorseller/04-potansiyometre-pwm.png)
+
+[Ölçeklenebilir SVG görseli](../../gorseller/04-potansiyometre-pwm.svg)
 
 ## Malzemeler
 
@@ -21,18 +23,20 @@ Devreyi USB bağlantısını çıkardıktan sonra kur.
 
 ## mBlock’ta oluştur
 
-Arduino Uno cihazını seç, Upload/Yükle moduna geç. Aşağıdaki temsili akışı cihazın başlangıç, kontrol, pin okuma/yazma ve işlem bloklarıyla kur. Etiketler dil ve cihaz uzantısı sürümüne göre değişebilir; buradaki metin bire bir menü adı değildir.
+Arduino Uno cihazını seç ve Upload/Yükle moduna geç. Görsel, mBlock’un renkleri, bağlantı çentikleri ve iç içe blok yerleşimi esas alınarak yeniden çizilmiştir; uygulama ekran görüntüsü değildir. Türkçe etiketler kurulu sürüme göre küçük farklılıklar gösterebilir.
+
+Değişkenler kategorisinde değer ve parlaklık oluştur. İlk değişken ayarlama bloğunun değer yuvasına mavi analog okuma bloğunu tak; analog pin alanına 0 yaz (A0). İşlemler kategorisinde çarpma bloğuna değer ve 255; bölme bloğuna çarpmanın sonucu ve 1023 yerleştir. Bölme bloğunu yuvarla bloğunun içine, bu sonucu parlaklık ayarlama bloğuna tak. PWM bloğunun çıkış yuvasına parlaklık değişkenini yerleştir. Bekleme alanına 0.02 yaz.
+
+Aşağıdaki metin, görselin okunabilir dökümüdür. Yuvarlak parantezler sayı/değer yuvalarını, köşeli parantezler açılır seçimleri, açılı parantezler koşul yuvasını temsil eder; bunları mBlock’a metin olarak yapıştırma.
 
 ```text
-Arduino Uno başladığında
-sürekli tekrarla
-  değer = analog pin A0 oku
-  parlaklık = yuvarla(değer × 255 / 1023)
-  PWM pin 9 → parlaklık
-  0,02 saniye bekle
+Arduino başladığında
+  sürekli tekrarla
+    [değer] i (analog oku pin (A) (0)) yap
+    [parlaklık] i (yuvarla (((değer) × (255)) / (1023))) yap
+    PWM ayarla pin (9) çıkış (parlaklık)
+    (0.02) saniye bekle
 ```
-
-Önce `değer` ve `parlaklık` adlı değişkenleri oluştur. PWM alanına parlaklık değişkenini yerleştir.
 
 Yükle düğmesini kullan.
 

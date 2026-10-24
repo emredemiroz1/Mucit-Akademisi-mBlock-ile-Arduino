@@ -2,7 +2,9 @@
 
 Dijital giriş, koşul ve pull-down direncini öğren.
 
-![Blok akışı](../../gorseller/03-buton-led.svg)
+![mBlock blok yerleşimi](../../gorseller/03-buton-led.png)
+
+[Ölçeklenebilir SVG görseli](../../gorseller/03-buton-led.svg)
 
 ## Malzemeler
 
@@ -21,15 +23,19 @@ Devreyi USB bağlantısını çıkardıktan sonra kur.
 
 ## mBlock’ta oluştur
 
-Arduino Uno cihazını seç, Upload/Yükle moduna geç. Aşağıdaki temsili akışı cihazın başlangıç, kontrol, pin okuma/yazma ve işlem bloklarıyla kur. Etiketler dil ve cihaz uzantısı sürümüne göre değişebilir; buradaki metin bire bir menü adı değildir.
+Arduino Uno cihazını seç ve Upload/Yükle moduna geç. Görsel, mBlock’un renkleri, bağlantı çentikleri ve iç içe blok yerleşimi esas alınarak yeniden çizilmiştir; uygulama ekran görüntüsü değildir. Türkçe etiketler kurulu sürüme göre küçük farklılıklar gösterebilir.
+
+Kontrol kategorisindeki eğer/değilse bloğunu döngünün içine koy. Pin kategorisindeki altıgen Dijital pin okuma bloğunu koşul yuvasına tak ve pin değerini 2 yap. Bu altıgen blok yüksek seviyede doğru, düşük seviyede yanlış koşulu verir. İki pin ayarlama bloğunu sırasıyla eğer ve değilse kollarına yerleştir.
+
+Aşağıdaki metin, görselin okunabilir dökümüdür. Yuvarlak parantezler sayı/değer yuvalarını, köşeli parantezler açılır seçimleri, açılı parantezler koşul yuvasını temsil eder; bunları mBlock’a metin olarak yapıştırma.
 
 ```text
-Arduino Uno başladığında
-sürekli tekrarla
-  eğer dijital pin 2 = 1 ise
-    dijital pin 13 → YÜKSEK
-  değilse
-    dijital pin 13 → DÜŞÜK
+Arduino başladığında
+  sürekli tekrarla
+    eğer <Dijital pin okuma (2)> ise
+      dijital ayarla pin (13) çıkış [yüksek]
+    değilse
+      dijital ayarla pin (13) çıkış [düşük]
 ```
 
 Yükle düğmesini kullan.

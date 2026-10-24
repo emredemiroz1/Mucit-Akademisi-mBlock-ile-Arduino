@@ -2,7 +2,9 @@
 
 Dijital çıkışı ve zamanlamayı öğren.
 
-![Blok akışı](../../gorseller/01-led-yanip-sonme.svg)
+![mBlock blok yerleşimi](../../gorseller/01-led-yanip-sonme.png)
+
+[Ölçeklenebilir SVG görseli](../../gorseller/01-led-yanip-sonme.svg)
 
 ## Malzemeler
 
@@ -18,15 +20,19 @@ Devreyi USB bağlantısını çıkardıktan sonra kur.
 
 ## mBlock’ta oluştur
 
-Arduino Uno cihazını seç, Upload/Yükle moduna geç. Aşağıdaki temsili akışı cihazın başlangıç, kontrol, pin okuma/yazma ve işlem bloklarıyla kur. Etiketler dil ve cihaz uzantısı sürümüne göre değişebilir; buradaki metin bire bir menü adı değildir.
+Arduino Uno cihazını seç ve Upload/Yükle moduna geç. Görsel, mBlock’un renkleri, bağlantı çentikleri ve iç içe blok yerleşimi esas alınarak yeniden çizilmiştir; uygulama ekran görüntüsü değildir. Türkçe etiketler kurulu sürüme göre küçük farklılıklar gösterebilir.
+
+Olaylar kategorisinden başlangıç bloğunu al. Kontrol kategorisindeki sürekli tekrarla bloğunu altına bağla. İki mavi pin ayarlama bloğunu ve iki turuncu bekleme bloğunu görseldeki sırayla döngünün içine tak. Pin alanlarını 13; açılır çıkış alanlarını sırasıyla yüksek ve düşük yap.
+
+Aşağıdaki metin, görselin okunabilir dökümüdür. Yuvarlak parantezler sayı/değer yuvalarını, köşeli parantezler açılır seçimleri, açılı parantezler koşul yuvasını temsil eder; bunları mBlock’a metin olarak yapıştırma.
 
 ```text
-Arduino Uno başladığında
-sürekli tekrarla
-  dijital pin 13 → YÜKSEK
-  1 saniye bekle
-  dijital pin 13 → DÜŞÜK
-  1 saniye bekle
+Arduino başladığında
+  sürekli tekrarla
+    dijital ayarla pin (13) çıkış [yüksek]
+    (1) saniye bekle
+    dijital ayarla pin (13) çıkış [düşük]
+    (1) saniye bekle
 ```
 
 Yükle düğmesini kullan.
