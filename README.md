@@ -1,3 +1,24 @@
+![Kodlama atölyesine hoş geldin](gorseller/kitap-kapagi.svg)
+
+# 📖 Bloklarla başla, fikirlerini çalıştır!
+
+**Bu kitap senin küçük elektronik atölyen.** Bir LED ile başla; trafik lambası, buton ve parlaklık kontrolüyle devam et.
+
+[🚀 İlk dersime gidiyorum](rehberler/baslangic.md) · [💡 LED görevini aç](ornekler/01-led-yanip-sonme/README.md) · [🌈 Diğer derslerim](https://github.com/emredemiroz1/Mucit-Akademisi-Dersler#readme)
+
+> [!TIP]
+> Sayfaları bir dijital kitap gibi oku. Önce görsele bak, sonucu tahmin et, blokları kur ve dene. Her seferinde küçük bir değişiklik yap!
+
+## 👋 Öğretmeninle tanış
+
+**Ben Emre Demiröz.** Mekatronik mühendisiyim ve **Mucit Akademisi’nde robotik kodlama eğitmeniyim.** Arduino, ESP32, temel elektronik ve IoT projeleriyle öğrencilerimin fikirlerini çalışan modellere dönüştürmesine yardımcı oluyorum.
+
+🎓 Sakarya Uygulamalı Bilimler Üniversitesi’nde mekatronik alanında yüksek lisans çalışmalarımı sürdürüyorum. 🤖 Otonom robotlar, ROS/ROS 2 ve biyolojik sinyallerle insan–makine etkileşimi üzerine çalışıyorum. 🛠️ TÜBİTAK ve TEKNOFEST projelerinde öğrencilere mentorluk yapıyorum.
+
+**Atölyemizde en sevdiğim soru: “Bunu başka nasıl yapabiliriz?”** Hata yaptığında durma: gözlemle, küçük bir değişiklik yap ve yeniden dene.
+
+---
+
 # Mucit Akademisi — mBlock ile Arduino
 
 Türkçe başlangıç eğitim seti: blokları kur, Arduino Uno’ya yükle, sonucu gözlemle.
